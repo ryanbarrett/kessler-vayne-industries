@@ -1,27 +1,173 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Kessler & Vayne Industries - Premium cybernetic augmentations and neural interfaces" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kessler & Vayne Industries - Premium cybernetic augmentations and neural interfaces">
     <title>Kessler & Vayne Industries</title>
-    <!-- GitHub Pages SPA routing -->
-    <script type="text/javascript">
-      (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      }(window.location))
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#shop" class="logo">
+                    <div class="logo-main">K&V</div>
+                    <div class="logo-sub">INDUSTRIES</div>
+                </a>
+                
+                <nav class="nav">
+                    <a href="#shop" class="nav-link">Shop</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#balance" class="nav-link">Balance</a>
+                    <a href="#settings" class="nav-link">⚙ Settings</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Shop Page -->
+        <section id="shop-page" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="page-title">AUGMENTATION CATALOG</h1>
+                    <p class="page-subtitle">Premium cybernetic enhancements for the discerning individual</p>
+                </div>
+                
+                <div class="placeholder-content halftone">
+                    <p>Product grid coming in M2...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="about-page" class="page">
+            <div class="container">
+                <h1 class="page-title">ABOUT KESSLER & VAYNE INDUSTRIES</h1>
+                
+                <div class="content-section">
+                    <p>
+                        Founded in 2089, Kessler & Vayne Industries emerged from the convergence of 
+                        military-grade augmentation technology and consumer accessibility. Our mission: 
+                        democratize human enhancement through the Axiom Mesh network.
+                    </p>
+                    
+                    <p>
+                        Our divisions span neural interfaces, biomechanical augmentation, and 
+                        ConvergenceLedger financial systems. Each product undergoes rigorous 
+                        SpecterID verification and GhostMark authentication protocols.
+                    </p>
+                    
+                    <p>
+                        <em>Some interfaces respond to unconventional input.</em> Our ImpulseCast 
+                        ordering system integrates seamlessly with your existing NodeKey 
+                        infrastructure, ensuring secure BindScript execution across all platforms.
+                    </p>
+                    
+                    <div class="tech-specs">
+                        <h2>Technical Specifications</h2>
+                        <ul>
+                            <li>• NodeKey compatibility: Universal</li>
+                            <li>• SpecterID binding: Permanent</li>
+                            <li>• GhostMark optimization: Adaptive</li>
+                            <li>• ImpulseCast latency: &lt;50ms</li>
+                            <li>• BindScript execution: Sandboxed</li>
+                            <li>• Axiom Mesh integration: Native</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Balance Page -->
+        <section id="balance-page" class="page">
+            <div class="container">
+                <div id="balance-content">
+                    <!-- Content will be dynamically generated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Settings Page -->
+        <section id="settings-page" class="page">
+            <div class="container">
+                <h1 class="page-title">SYSTEM SETTINGS</h1>
+
+                <div class="settings-section">
+                    <div class="settings-card">
+                        <h2>Data Management</h2>
+                        
+                        <div class="setting-item">
+                            <h3>Clear All Local Data</h3>
+                            <p>This will reset all stored credentials, balance, orders, and puzzle progress. This action cannot be undone.</p>
+                            
+                            <div id="clear-data-section">
+                                <button id="clear-data-btn" class="cyber-button danger">CLEAR ALL DATA</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h2>Accessibility</h2>
+                        
+                        <div class="setting-item">
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <h3>High Contrast</h3>
+                                    <p>Increase visual contrast for better readability</p>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" id="high-contrast-toggle">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <h3>Reduce Animation</h3>
+                                    <p>Minimize motion effects and transitions</p>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" id="reduce-animation-toggle">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-note">
+                        <p>Settings are stored locally and will be reset when clearing all data. No data is transmitted to external servers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <p>All augmentations void where prohibited. Neural interface compatibility not guaranteed.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Meshbits Disclaimer</h3>
+                    <p>ConvergenceLedger transactions are final. GhostMark verification required for priority delivery.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Catalog</h3>
+                    <p>Print Catalog Issue #2157 available via Axiom Mesh.<br><span class="highlight">NodeKey: 7J3L-MESH-BITS</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
